@@ -84,22 +84,22 @@
     <!-- Tam Ekran Ana İskelet -->
     <main class="flex-1 w-full max-w-4xl mx-auto flex flex-col bg-slate-50 min-h-[calc(100vh-53px)] shadow-2xl">
 
-        <!-- Banner & Restoran Başlığı -->
-        <div class="relative bg-brand-dark text-white pt-10 pb-12 px-6 text-center shadow-lg overflow-hidden border-b border-amber-600/30">
+        <!-- Banner & Restoran Başlığı (Daha kompakt / kibar boyuta getirildi) -->
+        <div class="relative bg-brand-dark text-white py-6 px-6 text-center shadow-md overflow-hidden border-b border-amber-600/30">
             <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
             
             <div class="relative z-10 flex flex-col items-center max-w-md mx-auto">
-                <div class="w-24 h-24 rounded-full bg-white p-1 shadow-xl mb-3 relative group">
+                <div class="w-16 h-16 rounded-full bg-white p-1 shadow-lg mb-2 relative group">
                     <img id="display-logo" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=300&q=80" alt="Restoran Logosu" class="w-full h-full object-cover rounded-full">
-                    <span class="absolute -bottom-1 -right-1 bg-brand-500 text-white p-1.5 rounded-full text-xs shadow-md">
+                    <span class="absolute -bottom-1 -right-1 bg-brand-500 text-white p-1 rounded-full text-[10px] shadow-sm">
                         <i class="fa-solid fa-utensils"></i>
                     </span>
                 </div>
-                <h2 id="display-name" class="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-amber-100">Yılmaz Pide</h2>
-                <p id="display-tagline" class="text-sm text-slate-300 mt-1 font-light">Lezzetin Dijital & Modern Adresi</p>
+                <h2 id="display-name" class="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-amber-100">Yılmaz Pide</h2>
+                <p id="display-tagline" class="text-xs sm:text-sm text-slate-300 mt-0.5 font-light">Lezzetin Dijital & Modern Adresi</p>
                 
-                <div class="mt-4 inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-medium border border-amber-500/30 shadow-inner">
-                    <i class="fa-solid fa-wifi rotate-90 text-xs"></i> Akıllı Masa NFC & QR Destekli
+                <div class="mt-2.5 inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-amber-500/20 text-amber-300 text-[11px] font-medium border border-amber-500/30 shadow-inner">
+                    <i class="fa-solid fa-wifi rotate-90 text-[10px]"></i> Akıllı Masa NFC & QR Destekli
                 </div>
             </div>
         </div>
@@ -107,38 +107,35 @@
         <!-- HUB GÖRÜNÜMÜ (Ana Butonlar) -->
         <div id="hub-view" class="flex-1 p-4 sm:p-8 space-y-4 max-w-xl mx-auto w-full">
             
-            <div class="glass-card p-3 rounded-2xl text-center shadow-sm border border-amber-200/80 mb-4">
+            <div class="glass-card p-3 rounded-2xl text-center shadow-sm border border-amber-200/80 mb-2">
                 <p class="text-xs sm:text-sm text-slate-700 font-medium flex items-center justify-center gap-2">
                     <i class="fa-solid fa-hand-pointer text-brand-600 animate-bounce"></i> Masanıza hoş geldiniz! İşlem seçin.
                 </p>
             </div>
 
             <!-- 1. DİJİTAL MENÜ BUTTON -->
-            <button onclick="switchTab('menu')" class="w-full group bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-700 hover:to-brand-800 text-white p-5 rounded-2xl shadow-md hover:shadow-xl transition-all duration-200 flex items-center justify-between border border-amber-500/30 active:scale-[0.99]">
+            <button onclick="switchTab('menu')" class="w-full group bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-700 hover:to-brand-800 text-white p-4 sm:p-5 rounded-2xl shadow-md hover:shadow-xl transition-all duration-200 flex items-center justify-between border border-amber-500/30 active:scale-[0.99]">
                 <div class="flex items-center space-x-4">
-                    <div class="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center text-2xl text-amber-200 group-hover:scale-110 transition-transform">
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white/10 flex items-center justify-center text-xl sm:text-2xl text-amber-200 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-book-open"></i>
                     </div>
                     <div class="text-left">
-                        <span class="block font-bold text-lg tracking-wide">Dijital Menü</span>
-                        <span class="block text-xs sm:text-sm text-amber-100/80 font-light">Pideler, Kebaplar, Tatlılar & İçecekler</span>
+                        <span class="block font-bold text-base sm:text-lg tracking-wide">Dijital Menü</span>
+                        <span class="block text-xs sm:text-sm text-amber-100/80 font-light">Pideler, Lahmacunlar, Tatlılar & İçecekler</span>
                     </div>
                 </div>
                 <i class="fa-solid fa-chevron-right text-amber-200/80 text-lg group-hover:translate-x-1 transition-transform"></i>
             </button>
 
-            <!-- 2. GOOGLE REVIEWS BUTTON -->
-            <a id="display-google-link" href="https://maps.google.com/?q=Yilmaz+Pide+Ordu" target="_blank" class="w-full group bg-white hover:bg-slate-50 text-slate-800 p-5 rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 flex items-center justify-between border border-slate-200 active:scale-[0.99]">
+            <!-- 2. GOOGLE REVIEWS BUTTON (Google İkonu ile) -->
+            <a id="display-google-link" href="https://maps.google.com/?q=Yilmaz+Pide+Ordu" target="_blank" class="w-full group bg-white hover:bg-slate-50 text-slate-800 p-4 sm:p-5 rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 flex items-center justify-between border border-slate-200 active:scale-[0.99]">
                 <div class="flex items-center space-x-4">
-                    <div class="w-14 h-14 rounded-xl bg-amber-50 text-amber-500 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-star"></i>
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl sm:text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-google"></i>
                     </div>
                     <div class="text-left">
                         <div class="flex items-center gap-2">
                             <span class="font-bold text-base sm:text-lg">Google'da Değerlendir</span>
-                            <span class="flex text-amber-400 text-xs">
-                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                            </span>
                         </div>
                         <span class="block text-xs sm:text-sm text-slate-500 font-light">Deneyiminizi paylaşarak bize destek olun ⭐</span>
                     </div>
@@ -147,9 +144,9 @@
             </a>
 
             <!-- 3. INSTAGRAM BUTTON -->
-            <a id="display-instagram-link" href="https://www.instagram.com/yilmazrestorantordu" target="_blank" class="w-full group bg-white hover:bg-slate-50 text-slate-800 p-5 rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 flex items-center justify-between border border-slate-200 active:scale-[0.99]">
+            <a id="display-instagram-link" href="https://www.instagram.com/yilmazrestorantordu" target="_blank" class="w-full group bg-white hover:bg-slate-50 text-slate-800 p-4 sm:p-5 rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 flex items-center justify-between border border-slate-200 active:scale-[0.99]">
                 <div class="flex items-center space-x-4">
-                    <div class="w-14 h-14 rounded-xl bg-pink-50 text-pink-600 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-pink-50 text-pink-600 flex items-center justify-center text-xl sm:text-2xl group-hover:scale-110 transition-transform">
                         <i class="fa-brands fa-instagram"></i>
                     </div>
                     <div class="text-left">
@@ -161,20 +158,20 @@
             </a>
 
             <!-- 4. WI-FI & GARSON / İLETİŞİM -->
-            <div class="grid grid-cols-2 gap-3 pt-2">
-                <button onclick="showWifiModal()" class="bg-white p-4 rounded-2xl shadow-sm border border-slate-200 flex flex-col items-center justify-center text-center hover:bg-slate-50 transition-colors">
-                    <i class="fa-solid fa-wifi text-emerald-600 text-2xl mb-1.5"></i>
-                    <span class="font-bold text-sm text-slate-800">Ücretsiz Wi-Fi</span>
-                    <span class="text-xs text-slate-400 mt-0.5">Şifreyi Gör</span>
+            <div class="grid grid-cols-2 gap-3 pt-1">
+                <button onclick="showWifiModal()" class="bg-white p-3.5 sm:p-4 rounded-2xl shadow-sm border border-slate-200 flex flex-col items-center justify-center text-center hover:bg-slate-50 transition-colors">
+                    <i class="fa-solid fa-wifi text-emerald-600 text-xl sm:text-2xl mb-1"></i>
+                    <span class="font-bold text-xs sm:text-sm text-slate-800">Ücretsiz Wi-Fi</span>
+                    <span class="text-[11px] text-slate-400 mt-0.5">Şifreyi Gör</span>
                 </button>
-                <a id="display-phone-link" href="tel:05555555555" class="bg-white p-4 rounded-2xl shadow-sm border border-slate-200 flex flex-col items-center justify-center text-center hover:bg-slate-50 transition-colors">
-                    <i class="fa-solid fa-phone text-blue-600 text-2xl mb-1.5"></i>
-                    <span class="font-bold text-sm text-slate-800">Garson / İletişim</span>
-                    <span class="text-xs text-slate-400 mt-0.5">Hemen Ara</span>
+                <a id="display-phone-link" href="tel:05555555555" class="bg-white p-3.5 sm:p-4 rounded-2xl shadow-sm border border-slate-200 flex flex-col items-center justify-center text-center hover:bg-slate-50 transition-colors">
+                    <i class="fa-solid fa-phone text-blue-600 text-xl sm:text-2xl mb-1"></i>
+                    <span class="font-bold text-xs sm:text-sm text-slate-800">Garson / İletişim</span>
+                    <span class="text-[11px] text-slate-400 mt-0.5">Hemen Ara</span>
                 </a>
             </div>
 
-            <div class="text-center pt-6 pb-4">
+            <div class="text-center pt-4 pb-2">
                 <p class="text-xs text-slate-400 flex items-center justify-center gap-1.5">
                     <i class="fa-solid fa-shield-halved text-slate-400"></i> Güvenli Temassız Masa Portalı
                 </p>
