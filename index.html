@@ -127,7 +127,7 @@
                 <i class="fa-solid fa-chevron-right text-amber-200/80 text-lg group-hover:translate-x-1 transition-transform"></i>
             </button>
 
-            <!-- 2. GOOGLE REVIEWS BUTTON (Haritalar Profil / Sorunsuz Yönlendirme) -->
+            <!-- 2. GOOGLE REVIEWS BUTTON -->
             <a id="display-google-link" href="https://maps.google.com/?q=Yilmaz+Pide+Ordu" target="_blank" class="w-full group bg-white hover:bg-slate-50 text-slate-800 p-5 rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 flex items-center justify-between border border-slate-200 active:scale-[0.99]">
                 <div class="flex items-center space-x-4">
                     <div class="w-14 h-14 rounded-xl bg-amber-50 text-amber-500 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
@@ -194,11 +194,11 @@
 
             <!-- Kategori Butonları -->
             <div class="bg-white px-4 py-3 border-b border-slate-200 flex gap-2 overflow-x-auto no-scrollbar sticky top-[65px] z-10">
-                <button onclick="filterMenu('all')" class="menu-cat-btn active px-4 py-2 rounded-full text-xs sm:text-sm font-bold whitespace-nowrap bg-brand-600 text-white shadow-sm">Tümü</button>
-                <button onclick="filterMenu('pide')" class="menu-cat-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold whitespace-nowrap bg-slate-100 text-slate-600 hover:bg-slate-200">Pideler & Lahmacun</button>
-                <button onclick="filterMenu('ana-yemek')" class="menu-cat-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold whitespace-nowrap bg-slate-100 text-slate-600 hover:bg-slate-200">Ana Yemekler</button>
-                <button onclick="filterMenu('tatli')" class="menu-cat-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold whitespace-nowrap bg-slate-100 text-slate-600 hover:bg-slate-200">Tatlılar</button>
-                <button onclick="filterMenu('icecek')" class="menu-cat-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold whitespace-nowrap bg-slate-100 text-slate-600 hover:bg-slate-200">İçecekler</button>
+                <button onclick="filterMenu('all', event)" class="menu-cat-btn active px-4 py-2 rounded-full text-xs sm:text-sm font-bold whitespace-nowrap bg-brand-600 text-white shadow-sm">Tümü</button>
+                <button onclick="filterMenu('pide', event)" class="menu-cat-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold whitespace-nowrap bg-slate-100 text-slate-600 hover:bg-slate-200">Pideler & Lahmacun</button>
+                <button onclick="filterMenu('ana-yemek', event)" class="menu-cat-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold whitespace-nowrap bg-slate-100 text-slate-600 hover:bg-slate-200">Ana Yemekler</button>
+                <button onclick="filterMenu('tatli', event)" class="menu-cat-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold whitespace-nowrap bg-slate-100 text-slate-600 hover:bg-slate-200">Tatlılar</button>
+                <button onclick="filterMenu('icecek', event)" class="menu-cat-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold whitespace-nowrap bg-slate-100 text-slate-600 hover:bg-slate-200">İçecekler</button>
             </div>
 
             <!-- Yemek Listesi (Izgara Düzen) -->
@@ -363,13 +363,17 @@
             });
         }
 
-        function filterMenu(category) {
+        function filterMenu(category, e) {
+            if (e) e.preventDefault();
+            
             document.querySelectorAll('.menu-cat-btn').forEach(btn => {
                 btn.classList.remove('bg-brand-600', 'text-white', 'shadow-sm');
                 btn.classList.add('bg-slate-100', 'text-slate-600');
             });
-            event.target.classList.remove('bg-slate-100', 'text-slate-600');
-            event.target.classList.add('bg-brand-600', 'text-white', 'shadow-sm');
+            if (e && e.currentTarget) {
+                e.currentTarget.classList.remove('bg-slate-100', 'text-slate-600');
+                e.currentTarget.classList.add('bg-brand-600', 'text-white', 'shadow-sm');
+            }
 
             renderMenu(category);
         }
