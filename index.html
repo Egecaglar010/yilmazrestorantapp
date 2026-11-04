@@ -105,7 +105,7 @@
             </div>
         </div>
 
-        <!-- HUB GÖRÜNÜMÜ (Ana Butonlar - Antrasit / Füme Uyumlu Tonlar) -->
+        <!-- HUB GÖRÜNÜMÜ (Ana Butonlar) -->
         <div id="hub-view" class="flex-1 p-3.5 sm:p-5 flex flex-col justify-center space-y-2.5 max-w-md mx-auto w-full">
             
             <div class="bg-anthracite-800 px-3 py-2 rounded-xl text-center shadow-sm border border-anthracite-700">
@@ -179,19 +179,19 @@
             </div>
         </div>
 
-        <!-- MENÜ GÖRÜNÜMÜ TAB -->
+        <!-- MENÜ GÖRÜNÜMÜ TAB (Açık ve Net Geri Dön / Ana Sayfa Tuşuyla) -->
         <div id="menu-view" class="hidden flex-1 flex-col bg-anthracite-900 w-full overflow-y-auto">
-            <!-- Menü Üst Başlık Barı -->
-            <div class="bg-anthracite-800 p-3 border-b border-anthracite-700 flex justify-between items-center shadow-sm sticky top-0 z-20">
-                <button onclick="switchTab('hub')" class="bg-anthracite-700 hover:bg-anthracite-600 text-zinc-200 px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all border border-anthracite-600">
-                    <i class="fa-solid fa-arrow-left"></i> Ana Sayfa
+            <!-- Menü Üst Başlık Barı (Net ve Büyük Geri Dön Butonu) -->
+            <div class="bg-anthracite-800 p-3 border-b border-anthracite-700 flex justify-between items-center shadow-md sticky top-0 z-20">
+                <button onclick="switchTab('hub')" class="bg-brand-600 hover:bg-brand-700 text-white px-3.5 py-2 rounded-xl text-xs font-bold flex items-center gap-2 transition-all shadow">
+                    <i class="fa-solid fa-arrow-left"></i> Geri Dön / Ana Sayfa
                 </button>
                 <span class="font-serif font-bold text-white text-base">Lezzet Menümüz</span>
-                <div class="w-12"></div>
+                <div class="w-10"></div>
             </div>
 
             <!-- Kategori Butonları -->
-            <div class="bg-anthracite-800 px-3 py-2.5 border-b border-anthracite-700 flex gap-2 overflow-x-auto no-scrollbar sticky top-[53px] z-10">
+            <div class="bg-anthracite-800 px-3 py-2.5 border-b border-anthracite-700 flex gap-2 overflow-x-auto no-scrollbar sticky top-[57px] z-10">
                 <button onclick="filterMenu('all', event)" class="menu-cat-btn active px-3.5 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-brand-600 text-white shadow-sm">Tümü</button>
                 <button onclick="filterMenu('pide', event)" class="menu-cat-btn px-3.5 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-anthracite-700 text-zinc-300 hover:bg-anthracite-600">Pideler & Lahmacun</button>
                 <button onclick="filterMenu('ana-yemek', event)" class="menu-cat-btn px-3.5 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-anthracite-700 text-zinc-300 hover:bg-anthracite-600">Ana Yemekler</button>
@@ -199,7 +199,7 @@
                 <button onclick="filterMenu('icecek', event)" class="menu-cat-btn px-3.5 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-anthracite-700 text-zinc-300 hover:bg-anthracite-600">İçecekler</button>
             </div>
 
-            <!-- Yemek Listesi (Koyu Antrasit Uyumlu Kartlar) -->
+            <!-- Yemek Listesi -->
             <div id="menu-items-container" class="p-3 sm:p-4 grid grid-cols-1 md:grid-cols-2 gap-3">
                 <!-- Ürünler buraya dinamik dolacak -->
             </div>
