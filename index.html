@@ -85,16 +85,14 @@
     <!-- Tam Ekran Kompakt Ana İskelet -->
     <main class="flex-1 w-full max-w-xl mx-auto flex flex-col bg-anthracite-900 shadow-2xl justify-between">
 
-        <!-- Banner & Restoran Başlığı -->
+        <!-- Banner & Restoran Başlığı (Özel Tasarladığın Logo Eklendi) -->
         <div class="relative bg-anthracite-800 text-white py-4 px-4 text-center shadow-sm overflow-hidden border-b border-anthracite-700 flex-shrink-0">
             <div class="absolute inset-0 opacity-5 bg-[radial-gradient(#fff_1.5px,transparent_1.5px)] [background-size:16px_16px]"></div>
             
             <div class="relative z-10 flex flex-col items-center max-w-sm mx-auto">
-                <div class="w-12 h-12 rounded-full bg-white p-0.5 shadow-md mb-1 relative group ring-2 ring-anthracite-700">
-                    <img id="display-logo" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=300&q=80" alt="Restoran Logosu" class="w-full h-full object-cover rounded-full">
-                    <span class="absolute -bottom-0.5 -right-0.5 bg-brand-500 text-white p-0.5 rounded-full text-[8px] shadow-sm">
-                        <i class="fa-solid fa-utensils"></i>
-                    </span>
+                <div class="w-14 h-14 rounded-full bg-anthracite-900 p-0.5 shadow-md mb-1.5 relative group ring-2 ring-anthracite-700 overflow-hidden">
+                    <!-- Buraya gönderdiğin logonun dosya adını veya linkini yazabilirsin -->
+                    <img id="display-logo" src="logo.jpg" alt="Yılmaz Pide Logo" class="w-full h-full object-cover rounded-full" onerror="this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=300&q=80'">
                 </div>
                 <h2 id="display-name" class="font-serif text-3xl sm:text-4xl font-extrabold tracking-tight text-white drop-shadow-sm">Yılmaz Pide</h2>
                 <p id="display-tagline" class="text-xs sm:text-sm text-zinc-300 font-normal mt-0.5">Lezzetin Dijital & Modern Adresi</p>
@@ -105,7 +103,7 @@
             </div>
         </div>
 
-        <!-- HUB GÖRÜNÜMÜ (Büyük & Kolay Okunur Butonlar) -->
+        <!-- HUB GÖRÜNÜMÜ -->
         <div id="hub-view" class="flex-1 p-3.5 sm:p-5 flex flex-col justify-center space-y-3 max-w-md mx-auto w-full">
             
             <div class="bg-anthracite-800 px-3 py-2.5 rounded-xl text-center shadow-sm border border-anthracite-700">
@@ -114,7 +112,7 @@
                 </p>
             </div>
 
-            <!-- 1. DİJİTAL MENÜ BUTTON (İri Yazılı) -->
+            <!-- 1. DİJİTAL MENÜ BUTTON -->
             <button onclick="switchTab('menu')" class="w-full group bg-anthracite-800 hover:bg-anthracite-700 text-zinc-100 p-3.5 sm:p-4 rounded-xl shadow-md hover:shadow-lg flex items-center justify-between border border-anthracite-700">
                 <div class="flex items-center space-x-3.5">
                     <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-anthracite-700 text-brand-500 flex items-center justify-center text-xl sm:text-2xl group-hover:scale-105 transition-transform duration-300 flex-shrink-0">
@@ -128,7 +126,7 @@
                 <i class="fa-solid fa-chevron-right text-zinc-400 text-base group-hover:translate-x-1 group-hover:text-brand-500 transition-all duration-300"></i>
             </button>
 
-            <!-- 2. GOOGLE REVIEWS BUTTON (İri Yazılı) -->
+            <!-- 2. GOOGLE REVIEWS BUTTON -->
             <a id="display-google-link" href="https://maps.google.com/?q=Yilmaz+Pide+Ordu" target="_blank" class="w-full group bg-anthracite-800 hover:bg-anthracite-700 text-zinc-100 p-3.5 sm:p-4 rounded-xl shadow-md hover:shadow-lg flex items-center justify-between border border-anthracite-700">
                 <div class="flex items-center space-x-3.5">
                     <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-anthracite-700 text-blue-400 flex items-center justify-center text-xl sm:text-2xl group-hover:scale-105 transition-transform duration-300 flex-shrink-0">
@@ -144,7 +142,7 @@
                 <i class="fa-solid fa-arrow-up-right-from-square text-zinc-400 text-base group-hover:text-brand-500 transition-colors duration-300"></i>
             </a>
 
-            <!-- 3. INSTAGRAM BUTTON (İri Yazılı) -->
+            <!-- 3. INSTAGRAM BUTTON -->
             <a id="display-instagram-link" href="https://www.instagram.com/yilmazrestorantordu" target="_blank" class="w-full group bg-anthracite-800 hover:bg-anthracite-700 text-zinc-100 p-3.5 sm:p-4 rounded-xl shadow-md hover:shadow-lg flex items-center justify-between border border-anthracite-700">
                 <div class="flex items-center space-x-3.5">
                     <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-anthracite-700 text-pink-400 flex items-center justify-center text-xl sm:text-2xl group-hover:scale-105 transition-transform duration-300 flex-shrink-0">
@@ -158,7 +156,7 @@
                 <i class="fa-solid fa-arrow-up-right-from-square text-zinc-400 text-base group-hover:text-pink-400 transition-colors duration-300"></i>
             </a>
 
-            <!-- 4. WI-FI & GARSON / İLETİŞİM (Büyük İkon ve Puntolar) -->
+            <!-- 4. WI-FI & İLETİŞİM NO (Garson yerine sadece numara yazıldı) -->
             <div class="grid grid-cols-2 gap-3">
                 <button onclick="showWifiModal()" class="bg-anthracite-800 hover:bg-anthracite-700 p-3 rounded-xl shadow-md hover:shadow-lg flex flex-col items-center justify-center text-center border border-anthracite-700 group">
                     <i class="fa-solid fa-wifi text-emerald-400 text-lg sm:text-xl mb-1 group-hover:scale-110 transition-transform duration-300"></i>
@@ -167,7 +165,7 @@
                 </button>
                 <a id="display-phone-link" href="tel:05555555555" class="bg-anthracite-800 hover:bg-anthracite-700 p-3 rounded-xl shadow-md hover:shadow-lg flex flex-col items-center justify-center text-center border border-anthracite-700 group">
                     <i class="fa-solid fa-phone text-blue-400 text-lg sm:text-xl mb-1 group-hover:scale-110 transition-transform duration-300"></i>
-                    <span class="font-extrabold text-sm text-white">Garson / İletişim</span>
+                    <span class="font-extrabold text-sm text-white">İletişim No</span>
                     <span class="text-xs text-zinc-300 font-medium mt-0.5">Hemen Ara</span>
                 </a>
             </div>
@@ -190,7 +188,7 @@
                 <div class="w-10"></div>
             </div>
 
-            <!-- Kategori Butonları (Daha Belirgin) -->
+            <!-- Kategori Butonları -->
             <div class="bg-anthracite-800 px-3 py-2.5 border-b border-anthracite-700 flex gap-2 overflow-x-auto no-scrollbar sticky top-[57px] z-10">
                 <button onclick="filterMenu('all', event)" class="menu-cat-btn active px-4 py-2 rounded-full text-xs sm:text-sm font-extrabold whitespace-nowrap bg-brand-600 text-white shadow-sm">Tümü</button>
                 <button onclick="filterMenu('pide', event)" class="menu-cat-btn px-4 py-2 rounded-full text-xs sm:text-sm font-extrabold whitespace-nowrap bg-anthracite-700 text-zinc-200 hover:bg-anthracite-600">Pideler & Lahmacun</button>
@@ -199,7 +197,7 @@
                 <button onclick="filterMenu('icecek', event)" class="menu-cat-btn px-4 py-2 rounded-full text-xs sm:text-sm font-extrabold whitespace-nowrap bg-anthracite-700 text-zinc-200 hover:bg-anthracite-600">İçecekler</button>
             </div>
 
-            <!-- Yemek Listesi (Ürün İsmi & Açıklamaları Büyütüldü) -->
+            <!-- Yemek Listesi -->
             <div id="menu-items-container" class="p-3 sm:p-4 grid grid-cols-1 md:grid-cols-2 gap-3">
                 <!-- Ürünler buraya dinamik dolacak -->
             </div>
