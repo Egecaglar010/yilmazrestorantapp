@@ -85,13 +85,14 @@
     <!-- Tam Ekran Kompakt Ana İskelet -->
     <main class="flex-1 w-full max-w-xl mx-auto flex flex-col bg-anthracite-900 shadow-2xl justify-between">
 
-        <!-- Banner & Restoran Başlığı -->
+        <!-- Banner & Restoran Başlığı (Tıklanabilir Logo Eklendi) -->
         <div class="relative bg-anthracite-800 text-white py-3.5 px-4 text-center shadow-sm overflow-hidden border-b border-anthracite-700 flex-shrink-0">
             <div class="absolute inset-0 opacity-5 bg-[radial-gradient(#fff_1.5px,transparent_1.5px)] [background-size:16px_16px]"></div>
             
             <div class="relative z-10 flex flex-col items-center max-w-sm mx-auto">
-                <div class="w-14 h-14 rounded-full bg-anthracite-900 p-0.5 shadow-lg mb-1 relative group ring-2 ring-brand-500/50 overflow-hidden flex items-center justify-center">
+                <div onclick="openLogoModal()" class="w-14 h-14 rounded-full bg-anthracite-900 p-0.5 shadow-lg mb-1 relative group ring-2 ring-brand-500/50 overflow-hidden flex items-center justify-center cursor-pointer hover:scale-105 active:scale-95 transition-transform duration-200">
                     <img id="display-logo" src="https://raw.githubusercontent.com/Egecaglar010/yilmazrestorantapp/cb14168f67aabb78ecf03aa75e3c25bb6f779a77/Firefly_Gemini%20Flash_y%C4%B1lmaz%20pide%20yaz%C4%B1l%C4%B1%20arka%20plan%20antrasit%20y%C4%B1lmaz%20pide%20yaz%C4%B1s%C4%B1%20beyaz%20sade%20s%cc%a7%C4%b1k%20yuvarlak%20logo%20291182.png" alt="Yılmaz Pide Logo" class="w-full h-full object-cover rounded-full">
+                    <span class="absolute bottom-0 inset-x-0 bg-black/60 text-[8px] text-zinc-200 py-0.5 opacity-0 group-hover:opacity-100 transition-opacity">Büyüt</span>
                 </div>
                 <h2 id="display-name" class="font-serif text-3xl sm:text-4xl font-extrabold tracking-tight text-white drop-shadow-sm">Yılmaz Pide</h2>
                 <p id="display-tagline" class="text-xs sm:text-sm text-zinc-300 font-normal mt-0.5">Lezzetin Dijital & Modern Adresi</p>
@@ -155,7 +156,7 @@
                 <i class="fa-solid fa-arrow-up-right-from-square text-zinc-400 text-base group-hover:text-pink-400 transition-colors duration-300"></i>
             </a>
 
-            <!-- 4. WI-FI & GÜNCELLENEN İLETİŞİM NO (0452 234 09 86) -->
+            <!-- 4. WI-FI & İLETİŞİM NO -->
             <div class="grid grid-cols-2 gap-3">
                 <button onclick="showWifiModal()" class="bg-anthracite-800 hover:bg-anthracite-700 p-3.5 rounded-xl shadow-md hover:shadow-lg flex flex-col items-center justify-center text-center border border-anthracite-700 group">
                     <i class="fa-solid fa-wifi text-emerald-400 text-xl sm:text-2xl mb-1 group-hover:scale-110 transition-transform duration-300"></i>
@@ -203,6 +204,22 @@
         </div>
 
     </main>
+
+    <!-- LOGO BÜYÜTME MODAL (Boş Ekrana Veya Butona Basarak Kapatma) -->
+    <div id="logo-modal" onclick="closeLogoModal(event)" class="hidden fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center p-4 transition-all duration-300 cursor-pointer">
+        <div class="relative max-w-xs sm:max-w-sm w-full flex flex-col items-center text-center" onclick="event.stopPropagation()">
+            <!-- Çıkma / Kapatma Butonu -->
+            <button onclick="closeLogoModal(event)" class="absolute -top-12 right-0 text-white bg-anthracite-700 hover:bg-brand-600 w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-lg border border-anthracite-600 transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <!-- Büyük Logo Görseli -->
+            <div class="w-64 h-64 sm:w-72 sm:h-72 rounded-full p-1.5 bg-anthracite-800 ring-4 ring-brand-500 shadow-2xl overflow-hidden mb-3">
+                <img id="modal-logo-img" src="" alt="Yılmaz Pide Büyütülmüş Logo" class="w-full h-full object-cover rounded-full">
+            </div>
+            <p class="text-zinc-400 text-xs font-medium">Kapatmak için ekrana veya <i class="fa-solid fa-xmark text-brand-500"></i> butonuna dokunun</p>
+        </div>
+    </div>
 
     <!-- Wi-Fi Modal -->
     <div id="wifi-modal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4">
@@ -290,7 +307,6 @@
                 id: 1,
                 name: "Kuşbaşılı Kaşarlı Pide",
                 category: "pide",
-                price: "280 ₺",
                 desc: "Özel marine edilmiş dana eti, közlenmiş biber ve erimiş özel kaşar peyniri ile.",
                 img: "https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=400&q=80"
             },
@@ -298,7 +314,6 @@
                 id: 2,
                 name: "Taş Fırın Lahmacun",
                 category: "pide",
-                price: "110 ₺",
                 desc: "Çıtır ince hamur, zırh kıyması, taze yeşillikler ve limon ile servis edilir.",
                 img: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80"
             },
@@ -306,7 +321,6 @@
                 id: 3,
                 name: "Izgara Köfte",
                 category: "ana-yemek",
-                price: "340 ₺",
                 desc: "100% dana kıymadan el yapımı köfteler, ızgara domates, biber ve pirinç pilavı ile.",
                 img: "https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=400&q=80"
             },
@@ -314,7 +328,6 @@
                 id: 4,
                 name: "Fıstıklı Ev Baklavası",
                 category: "tatli",
-                price: "190 ₺",
                 desc: "Antep fıstıklı, ince açılmış yufka ve dondurma ikramı ile.",
                 img: "https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&w=400&q=80"
             },
@@ -322,7 +335,6 @@
                 id: 5,
                 name: "Taze Yayık Ayranı",
                 category: "icecek",
-                price: "45 ₺",
                 desc: "Ev yapımı bol köpüklü geleneksel ayran.",
                 img: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=400&q=80"
             }
@@ -347,10 +359,7 @@
                 card.innerHTML = `
                     <img src="${item.img}" alt="${item.name}" class="w-20 h-20 sm:w-22 sm:h-22 rounded-lg object-cover flex-shrink-0 bg-anthracite-700">
                     <div class="flex-1 min-w-0">
-                        <div class="flex justify-between items-start">
-                            <h4 class="font-extrabold text-white text-base sm:text-lg truncate">${item.name}</h4>
-                            <span class="font-extrabold text-brand-500 text-base sm:text-lg ml-2 whitespace-nowrap">${item.price}</span>
-                        </div>
+                        <h4 class="font-extrabold text-white text-base sm:text-lg truncate">${item.name}</h4>
                         <p class="text-xs sm:text-sm text-zinc-300 font-medium line-clamp-2 mt-1 leading-relaxed">${item.desc}</p>
                     </div>
                 `;
@@ -386,6 +395,17 @@
                 menuView.classList.remove('flex');
                 hubView.classList.remove('hidden');
             }
+        }
+
+        function openLogoModal() {
+            const logoSrc = document.getElementById('display-logo').src;
+            document.getElementById('modal-logo-img').src = logoSrc;
+            document.getElementById('logo-modal').classList.remove('hidden');
+        }
+
+        function closeLogoModal(e) {
+            if (e) e.stopPropagation();
+            document.getElementById('logo-modal').classList.add('hidden');
         }
 
         function showWifiModal() { document.getElementById('wifi-modal').classList.remove('hidden'); }
