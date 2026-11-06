@@ -48,7 +48,7 @@
 <body class="h-full bg-[#121417] text-zinc-100 antialiased flex flex-col justify-between overflow-x-hidden selection:bg-brand-500 selection:text-white">
 
     <!-- Üst Yönetim / Panel Barı -->
-    <header class="bg-anthracite-800 text-zinc-300 px-3 py-2 shadow-md flex justify-between items-center z-30 border-b border-anthracite-700">
+    <header class="bg-anthracite-800 text-zinc-300 px-3 py-1.5 shadow-md flex justify-between items-center z-30 border-b border-anthracite-700">
         <div class="flex items-center space-x-2">
             <span class="inline-block w-2.5 h-2.5 bg-emerald-500 rounded-full animate-ping"></span>
             <h1 class="font-bold text-xs sm:text-sm tracking-wide flex items-center gap-1.5">
@@ -56,72 +56,66 @@
             </h1>
         </div>
         <div class="flex items-center gap-2">
-            <button onclick="toggleAdminModal()" class="bg-anthracite-700 hover:bg-anthracite-600 text-zinc-200 text-xs px-3 py-1.5 rounded-lg transition-all flex items-center gap-1 shadow-sm border border-anthracite-600 font-semibold">
+            <button onclick="toggleAdminModal()" class="bg-anthracite-700 hover:bg-anthracite-600 text-zinc-200 text-xs px-2.5 py-1 rounded-lg transition-all flex items-center gap-1 shadow-sm border border-anthracite-600 font-semibold">
                 <i class="fa-solid fa-print text-brand-500"></i> <span>QR & Stand</span>
             </button>
         </div>
     </header>
 
-    <!-- Tam Ekran Kompakt Ana İskelet -->
-    <main class="flex-1 w-full max-w-xl mx-auto flex flex-col bg-anthracite-900 shadow-2xl justify-between p-4">
+    <!-- Kompakt & Toparlanmış Ana İskelet -->
+    <main class="flex-1 w-full max-w-md mx-auto flex flex-col bg-anthracite-900 shadow-2xl justify-center p-3 space-y-3">
 
-        <!-- Banner & Marka Başlığı -->
-        <div class="relative bg-anthracite-800 text-white py-5 px-4 text-center shadow-sm overflow-hidden border border-anthracite-700 rounded-2xl flex-shrink-0 mb-4">
-            <div class="absolute inset-0 opacity-5 bg-[radial-gradient(#fff_1.5px,transparent_1.5px)] [background-size:16px_16px]"></div>
-            
+        <!-- Banner & Yeni Logo Alanı -->
+        <div class="relative bg-anthracite-800 text-white py-3.5 px-3 text-center shadow-sm overflow-hidden border border-anthracite-700 rounded-xl flex-shrink-0">
             <div class="relative z-10 flex flex-col items-center max-w-sm mx-auto">
-                <div onclick="openLogoModal()" class="w-16 h-16 rounded-full bg-anthracite-900 p-0.5 shadow-lg mb-2 relative group ring-2 ring-brand-500/50 overflow-hidden flex items-center justify-center cursor-pointer hover:scale-105 active:scale-95 transition-transform duration-200">
-                    <img id="display-logo" src="https://raw.githubusercontent.com/Egecaglar010/yilmazrestorantapp/cb14168f67aabb78ecf03aa75e3c25bb6f779a77/Firefly_Gemini%20Flash_y%C4%B1lmaz%20pide%20yaz%C4%B1l%C4%B1%20arka%20plan%20antrasit%20y%C4%B1lmaz%20pide%20yaz%C4%b1s%C4%b1%20beyaz%20sade%20s%cc%a7%C4%b1k%20yuvarlak%20logo%20291182.png" alt="Kılıfçım Logo" class="w-full h-full object-cover rounded-full">
+                <div onclick="openLogoModal()" class="w-16 h-16 rounded-full bg-anthracite-900 p-0.5 shadow-lg mb-1.5 relative group ring-2 ring-brand-500/50 overflow-hidden flex items-center justify-center cursor-pointer hover:scale-105 active:scale-95 transition-transform duration-200">
+                    <img id="display-logo" src="https://raw.githubusercontent.com/Egecaglar010/yilmazrestorantapp/main/image_bd4c3a.jpg" alt="Kılıfçım Logo" class="w-full h-full object-cover rounded-full">
                     <span class="absolute bottom-0 inset-x-0 bg-black/60 text-[8px] text-zinc-200 py-0.5 opacity-0 group-hover:opacity-100 transition-opacity">Büyüt</span>
                 </div>
-                <h2 class="font-serif text-3xl sm:text-4xl font-extrabold tracking-tight text-white drop-shadow-sm">Kılıfçım</h2>
-                <span class="font-serif text-base sm:text-lg font-medium tracking-wide text-zinc-200 mt-0.5">Aksesuar & Tarz Dünyası</span>
-                
-                <div class="mt-2.5 inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-anthracite-700 text-brand-500 text-xs font-semibold border border-anthracite-600">
-                    <i class="fa-solid fa-bolt text-[10px]"></i> Hızlı Temassız Stant Portalı
-                </div>
+                <h2 class="font-serif text-2xl sm:text-3xl font-extrabold tracking-tight text-white drop-shadow-sm">Kılıfçım</h2>
+                <span class="font-serif text-xs sm:text-sm font-medium tracking-wide text-zinc-300">Aksesuar & Tarz Dünyası</span>
             </div>
         </div>
 
-        <!-- ANA HUB BUTONLARI (Sadece Google Yorum ve Instagram) -->
-        <div id="hub-view" class="flex-1 flex flex-col justify-center space-y-4 max-w-md mx-auto w-full my-auto">
+        <!-- ANA HUB BUTONLARI -->
+        <div id="hub-view" class="flex flex-col space-y-2.5 w-full">
             
-            <div class="bg-anthracite-800 px-4 py-3 rounded-2xl text-center shadow-sm border border-anthracite-700">
-                <p class="text-xs sm:text-sm text-zinc-200 font-bold flex items-center justify-center gap-1.5">
-                    <i class="fa-solid fa-hand-point-down text-brand-500 text-base animate-bounce"></i> İşlem seçmek için dokununuz.
+            <div class="bg-anthracite-800 px-3 py-2 rounded-xl text-center shadow-sm border border-anthracite-700">
+                <p class="text-xs text-zinc-200 font-bold flex items-center justify-center gap-1.5">
+                    <i class="fa-solid fa-hand-point-down text-brand-500 text-sm animate-bounce"></i> İşlem seçmek için dokununuz.
                 </p>
             </div>
 
             <!-- 1. GOOGLE REVIEWS BUTTON -->
-            <a id="display-google-link" href="https://maps.google.com/?q=Kilifcim+Ordu" target="_blank" class="w-full group bg-anthracite-800 hover:bg-anthracite-700 text-zinc-100 p-5 rounded-2xl shadow-md hover:shadow-lg flex items-center justify-between border border-anthracite-700">
-                <div class="flex items-center space-x-4">
-                    <div class="w-14 h-14 rounded-xl bg-anthracite-700 text-blue-400 flex items-center justify-center text-2xl group-hover:scale-105 transition-transform duration-300 flex-shrink-0 border border-anthracite-600">
+            <a id="display-google-link" href="https://maps.google.com/?q=Kilifcim+Ordu" target="_blank" class="w-full group bg-anthracite-800 hover:bg-anthracite-700 text-zinc-100 p-3.5 rounded-xl shadow-md hover:shadow-lg flex items-center justify-between border border-anthracite-700">
+                <div class="flex items-center space-x-3">
+                    <div class="w-11 h-11 rounded-lg bg-anthracite-700 text-blue-400 flex items-center justify-center text-xl group-hover:scale-105 transition-transform duration-300 flex-shrink-0 border border-anthracite-600">
                         <i class="fa-brands fa-google"></i>
                     </div>
                     <div class="text-left">
-                        <span class="block font-extrabold text-lg sm:text-xl text-white">Google'da Değerlendir</span>
-                        <span class="block text-xs sm:text-sm text-zinc-300 font-medium mt-0.5">Deneyiminizi paylaşarak bize destek olun ⭐</span>
+                        <span class="block font-extrabold text-base sm:text-lg text-white">Google'da Değerlendir</span>
+                        <span class="block text-[11px] sm:text-xs text-zinc-300 font-medium">Deneyiminizi paylaşarak bize destek olun ⭐</span>
                     </div>
                 </div>
-                <i class="fa-solid fa-arrow-up-right-from-square text-zinc-400 text-lg group-hover:text-brand-500 transition-colors duration-300"></i>
+                <i class="fa-solid fa-arrow-up-right-from-square text-zinc-400 text-sm group-hover:text-brand-500 transition-colors duration-300"></i>
             </a>
 
             <!-- 2. INSTAGRAM BUTTON -->
-            <a id="display-instagram-link" href="https://www.instagram.com/kilifcim" target="_blank" class="w-full group bg-anthracite-800 hover:bg-anthracite-700 text-zinc-100 p-5 rounded-2xl shadow-md hover:shadow-lg flex items-center justify-between border border-anthracite-700">
-                <div class="flex items-center space-x-4">
-                    <div class="w-14 h-14 rounded-xl bg-anthracite-700 text-pink-400 flex items-center justify-center text-2xl group-hover:scale-105 transition-transform duration-300 flex-shrink-0 border border-anthracite-600">
+            <a id="display-instagram-link" href="https://www.instagram.com/kilifcim" target="_blank" class="w-full group bg-anthracite-800 hover:bg-anthracite-700 text-zinc-100 p-3.5 rounded-xl shadow-md hover:shadow-lg flex items-center justify-between border border-anthracite-700">
+                <div class="flex items-center space-x-3">
+                    <div class="w-11 h-11 rounded-lg bg-anthracite-700 text-pink-400 flex items-center justify-center text-xl group-hover:scale-105 transition-transform duration-300 flex-shrink-0 border border-anthracite-600">
                         <i class="fa-brands fa-instagram"></i>
                     </div>
                     <div class="text-left">
-                        <span id="display-instagram-handle" class="block font-extrabold text-lg sm:text-xl text-white">@kilifcim</span>
-                        <span class="block text-xs sm:text-sm text-zinc-300 font-medium mt-0.5">Instagram'da bizi takip edin & etiketleyin</span>
+                        <span id="display-instagram-handle" class="block font-extrabold text-base sm:text-lg text-white">@kilifcim</span>
+                        <span class="block text-[11px] sm:text-xs text-zinc-300 font-medium">Instagram'da bizi takip edin & etiketleyin</span>
                     </div>
                 </div>
-                <i class="fa-solid fa-arrow-up-right-from-square text-zinc-400 text-lg group-hover:text-pink-400 transition-colors duration-300"></i>
+                <i class="fa-solid fa-arrow-up-right-from-square text-zinc-400 text-sm group-hover:text-pink-400 transition-colors duration-300"></i>
             </a>
 
-            <div class="text-center pt-2">
-                <p class="text-xs text-zinc-400 font-medium flex items-center justify-center gap-1.5">
+            <div class="text-center pt-1">
+                <p class="text-[11px] text-zinc-400 font-medium flex items-center justify-center gap-1.5">
                     <i class="fa-solid fa-shield-halved text-zinc-400"></i> Güvenli Temassız Müşteri Portalı
                 </p>
             </div>
@@ -145,39 +139,39 @@
     <!-- QR KOD & STAND YAZDIRMA MODAL -->
     <div id="admin-modal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4 overflow-y-auto">
         <div class="bg-anthracite-800 border border-anthracite-700 text-white rounded-3xl max-w-xl w-full shadow-2xl overflow-hidden my-auto">
-            <div class="bg-anthracite-900 text-white p-5 flex justify-between items-center border-b border-anthracite-700">
+            <div class="bg-anthracite-900 text-white p-4 flex justify-between items-center border-b border-anthracite-700">
                 <div class="flex items-center gap-2">
                     <i class="fa-solid fa-print text-brand-500 text-lg"></i>
-                    <h3 class="font-bold text-lg">Masa Standı & QR Kod Yazdır</h3>
+                    <h3 class="font-bold text-base">Stand & QR Kod Yazdır</h3>
                 </div>
-                <button onclick="toggleAdminModal()" class="text-zinc-400 hover:text-white text-xl">
+                <button onclick="toggleAdminModal()" class="text-zinc-400 hover:text-white text-lg">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
 
-            <div class="p-6 space-y-6">
-                <div class="bg-anthracite-900 p-4 rounded-2xl border border-anthracite-700 flex flex-col sm:flex-row items-center gap-6">
-                    <div class="bg-white p-3 rounded-2xl shadow-sm border border-zinc-200 flex flex-col items-center">
-                        <div id="qrcode" class="p-2"></div>
+            <div class="p-5 space-y-4">
+                <div class="bg-anthracite-900 p-3.5 rounded-2xl border border-anthracite-700 flex flex-col sm:flex-row items-center gap-4">
+                    <div class="bg-white p-2.5 rounded-xl shadow-sm border border-zinc-200 flex flex-col items-center">
+                        <div id="qrcode" class="p-1"></div>
                         <span class="text-[10px] text-zinc-500 font-mono mt-1">Sabit Canlı QR</span>
                     </div>
                     
-                    <div class="flex-1 text-center sm:text-left space-y-2">
-                        <h5 class="font-bold text-white text-sm">Masalara / Standlara Koyacağınız QR Kod</h5>
+                    <div class="flex-1 text-center sm:text-left space-y-1.5">
+                        <h5 class="font-bold text-white text-sm">Stantlar İçin QR Kod</h5>
                         <p class="text-xs text-zinc-400 leading-relaxed">
-                            Bu QR kod doğrudan canlı Kılıfçım sitenize bağlıdır. Çıktı alıp stantlara yerleştirebilirsiniz.
+                            Bu QR kod doğrudan canlı Kılıfçım sitenize bağlıdır. Çıktı alıp stantlarınıza yerleştirebilirsiniz.
                         </p>
-                        <div class="pt-2">
-                            <button onclick="printStand()" class="bg-brand-600 hover:bg-brand-700 text-white text-xs px-5 py-2.5 rounded-xl font-bold transition-all flex items-center gap-1.5 shadow mx-auto sm:mx-0">
-                                <i class="fa-solid fa-print"></i> Stand Tasarımını Yazdır / PDF Al
+                        <div class="pt-1">
+                            <button onclick="printStand()" class="bg-brand-600 hover:bg-brand-700 text-white text-xs px-4 py-2 rounded-xl font-bold transition-all flex items-center gap-1.5 shadow mx-auto sm:mx-0">
+                                <i class="fa-solid fa-print"></i> Tasarımı Yazdır / PDF Al
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-anthracite-900 p-4 border-t border-anthracite-700 flex justify-end">
-                <button onclick="toggleAdminModal()" class="bg-anthracite-700 hover:bg-anthracite-600 text-zinc-200 text-sm px-5 py-2 rounded-xl font-bold transition-all">
+            <div class="bg-anthracite-900 p-3 border-t border-anthracite-700 flex justify-end">
+                <button onclick="toggleAdminModal()" class="bg-anthracite-700 hover:bg-anthracite-600 text-zinc-200 text-xs px-4 py-2 rounded-xl font-bold transition-all">
                     Kapat
                 </button>
             </div>
@@ -194,7 +188,7 @@
             </div>
             <div class="space-y-1">
                 <p class="font-bold text-lg text-amber-800">DEĞERLENDİRME & TAKİP İÇİN OKUTUN</p>
-                <p class="text-xs text-slate-500">Kameranızı açıp QR Kodu taratın veya Telefonunuzu Yaklaştırın (NFC)</p>
+                <p class="text-xs text-slate-500">Kameranızı açıp QR Kodu taratın</p>
             </div>
             <div class="flex justify-center gap-6 text-xs font-semibold text-slate-700 pt-4 border-t">
                 <span>⭐ Google Yorum</span>
@@ -234,8 +228,8 @@
 
             new QRCode(qrContainer, {
                 text: currentUrl,
-                width: 110,
-                height: 110,
+                width: 100,
+                height: 100,
                 colorDark: "#121417",
                 colorLight: "#ffffff",
                 correctLevel: QRCode.CorrectLevel.H
@@ -243,15 +237,15 @@
 
             new QRCode(qrPrintContainer, {
                 text: currentUrl,
-                width: 160,
-                height: 160,
+                width: 150,
+                height: 150,
                 colorDark: "#121417",
                 colorLight: "#ffffff",
                 correctLevel: QRCode.CorrectLevel.H
             });
         }
 
-        function printStand() { window.print(); }
+        printStand = function() { window.print(); }
     </script>
 </body>
 </html>
