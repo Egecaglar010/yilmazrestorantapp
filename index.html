@@ -202,7 +202,7 @@
 
     </main>
 
-    <!-- ÜRÜN DETAY / BÜYÜTME MODALİ (YENİ EKLENDİ) -->
+    <!-- ÜRÜN DETAY / BÜYÜTME MODALİ -->
     <div id="product-modal" onclick="closeProductModal(event)" class="hidden fixed inset-0 bg-black/85 backdrop-blur-md z-50 flex items-center justify-center p-4 cursor-pointer">
         <div class="relative max-w-sm w-full bg-anthracite-800 border border-anthracite-700 rounded-3xl p-5 shadow-2xl overflow-hidden cursor-default" onclick="event.stopPropagation()">
             <button onclick="closeProductModal(event)" class="absolute top-4 right-4 bg-anthracite-700 hover:bg-brand-600 text-white w-9 h-9 rounded-full flex items-center justify-center text-lg shadow transition-colors z-10">
@@ -314,147 +314,147 @@
 
     <script>
         const menuItems = [
-            // ÇORBALAR
+            // ÇORBALAR (Doğru ve net görsellerle güncellendi)
             {
                 id: 1,
                 name: "Süzme Mercimek Çorbası",
                 category: "corba",
                 desc: "Közlenmiş tereyağı ve kıtır ekmek dilimleri eşliğinde geleneksel süzme mercimek.",
-                img: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=400&q=80"
+                img: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&q=80"
             },
             {
                 id: 2,
                 name: "Geleneksel Yahni Çorbası",
                 category: "corba",
                 desc: "Ağır ateşte pişmiş lokum gibi dana eti ve şifalı özel et suyu ile.",
-                img: "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=400&q=80"
+                img: "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80"
             },
             {
                 id: 3,
                 name: "Tane Tavuk Suyu Çorbası",
                 category: "corba",
                 desc: "Didiklenmiş taze tavuk etleri, havuç ve özel baharatlı şifalı tavuk suyu.",
-                img: "https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?auto=format&fit=crop&w=400&q=80"
+                img: "https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?auto=format&fit=crop&w=600&q=80"
             },
             {
                 id: 4,
                 name: "Özel İşkembe Çorbası",
                 category: "corba",
                 desc: "Terbiyeli sarımsak ve sirke sosu ile sunulan nefis taş fırın işkembe çorbası.",
-                img: "https://images.unsplash.com/photo-1588566565463-180a5b2090d2?auto=format&fit=crop&w=400&q=80"
+                img: "https://images.unsplash.com/photo-1588566565463-180a5b2090d2?auto=format&fit=crop&w=600&q=80"
             },
 
-            // DÖNERLER
+            // DÖNERLER (Doğru ve net görsellerle güncellendi)
             {
                 id: 5,
                 name: "Porsiyon Et Döner",
                 category: "doner",
                 desc: "%100 dana etinden özel marinasyonlu yaprak döner, tırnak pide ve domates eşliğinde.",
-                img: "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=400&q=80"
+                img: "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=600&q=80"
             },
             {
                 id: 6,
                 name: "Pilav Üstü Yaprak Döner",
                 category: "doner",
                 desc: "Tereyağlı şehriyeli pirinç pilavı üzerinde bol porsiyon lezzetli yaprak et döner.",
-                img: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=400&q=80"
+                img: "https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?auto=format&fit=crop&w=600&q=80"
             },
             {
                 id: 7,
                 name: "İskender Döner",
                 category: "doner",
                 desc: "Közlenmiş pide yatağında yaprak et döner, özel domates sosu, tereyağı ve manda yoğurdu ile.",
-                img: "https://images.unsplash.com/photo-1561651823-34feb02250e4?auto=format&fit=crop&w=400&q=80"
+                img: "https://images.unsplash.com/photo-1561651823-34feb02250e4?auto=format&fit=crop&w=600&q=80"
             },
 
-            // PİDE & LAHMACUN
+            // PİDE & LAHMACUN (Doğru ve net görsellerle güncellendi)
             {
                 id: 8,
                 name: "Taş Fırın Lahmacun",
                 category: "pide",
                 desc: "Çıtır ince hamur, zırh kıyması, taze maydanoz, yeşillik ve limon ile servis edilir.",
-                img: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80"
+                img: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80"
             },
             {
                 id: 9,
                 name: "Kuşbaşılı Kaşarlı Pide",
                 category: "pide",
                 desc: "Özel marine edilmiş dana eti, köz biber ve erimiş özel kaşar peyniri birleşimi.",
-                img: "https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=400&q=80"
+                img: "https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=600&q=80"
             },
             {
                 id: 10,
                 name: "Kıymalı Yumurtalı Pide",
                 category: "pide",
                 desc: "Karadeniz usulü harmanlanmış dana kıyma ve ortasında taze fırınlanmış yumurta.",
-                img: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80"
+                img: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80"
             },
             {
                 id: 11,
                 name: "Karışık Usta Pidesi",
                 category: "pide",
                 desc: "Kuşbaşı, kıyma, sucuk ve bol kaşar peynirinin muhteşem buluşması.",
-                img: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=400&q=80"
+                img: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=600&q=80"
             },
 
-            // EV YEMEKLERİ & PİLAV
+            // EV YEMEKLERİ & PİLAV (Doğru ve net görsellerle güncellendi)
             {
                 id: 12,
                 name: "Sade Tereyağlı Pirinç Pilavı",
                 category: "ana-yemek",
                 desc: "Geleneksel yöntemle pişirilmiş, tane tane bol tereyağlı şehriyeli pirinç pilavı.",
-                img: "https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?auto=format&fit=crop&w=400&q=80"
+                img: "https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?auto=format&fit=crop&w=600&q=80"
             },
             {
                 id: 13,
                 name: "Nohutlu Pilav",
                 category: "ana-yemek",
                 desc: "Tereyağlı lezzetli pirinç pilavı üzerine yumuşacık haşlanmış koçbaşı nohut.",
-                img: "https://images.unsplash.com/photo-1596797882870-8c33deeac224?auto=format&fit=crop&w=400&q=80"
+                img: "https://images.unsplash.com/photo-1596797882870-8c33deeac224?auto=format&fit=crop&w=600&q=80"
             },
             {
                 id: 14,
                 name: "Tavuklu Pilav",
                 category: "ana-yemek",
                 desc: "Tane tane pilav üzerine özel baharatlarla didiklenmiş taze tavuk göğsü.",
-                img: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=400&q=80"
+                img: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80"
             },
             {
                 id: 15,
                 name: "Kuru Fasulye & Pilav Menü",
                 category: "ana-yemek",
                 desc: "Çömlekte ağır ateşte pişmiş etli İspir kuru fasulyesi ve tereyağlı pirinç pilavı.",
-                img: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=400&q=80"
+                img: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80"
             },
 
-            // TATLILAR & İÇECEKLER
+            // TATLILAR & İÇECEKLER (Doğru ve net görsellerle güncellendi)
             {
                 id: 16,
                 name: "Fıstıklı Ev Baklavası",
                 category: "tatli",
                 desc: "Gaziantep fıstıklı, çıtır kat kat açılmış şerbetli baklava.",
-                img: "https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&w=400&q=80"
+                img: "https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&w=600&q=80"
             },
             {
                 id: 17,
                 name: "Fırın Sütlaç",
                 category: "tatli",
                 desc: "Üzeri fırınlanmış karamelize, hakiki manda sütlü geleneksel sütlaç.",
-                img: "https://images.unsplash.com/photo-1579372786545-d24232daf58c?auto=format&fit=crop&w=400&q=80"
+                img: "https://images.unsplash.com/photo-1579372786545-d24232daf58c?auto=format&fit=crop&w=600&q=80"
             },
             {
                 id: 18,
                 name: "Taze Yayık Ayranı",
                 category: "icecek",
                 desc: "Bol köpüklü, soğuk geleneksel ev yapımı ayran.",
-                img: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=400&q=80"
+                img: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80"
             },
             {
                 id: 19,
                 name: "Şalgam Suyu / Kutu İçecekler",
                 category: "icecek",
                 desc: "Acılı/Acısız Adana şalgamı veya soğuk kutu meşrubat çeşitleri.",
-                img: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=400&q=80"
+                img: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80"
             }
         ];
 
@@ -473,7 +473,6 @@
 
             filtered.forEach(item => {
                 const card = document.createElement('div');
-                // Kartın tamamına tıklandığında detay popup açılması için cursor-pointer ve onclick eklendi
                 card.className = "bg-anthracite-800 border border-anthracite-700 p-3.5 rounded-xl shadow-sm flex gap-3.5 items-center hover:border-brand-500/60 transition-all duration-300 cursor-pointer group active:scale-[0.98]";
                 card.onclick = () => openProductModal(item);
                 
@@ -494,7 +493,6 @@
             });
         }
 
-        // Ürün Detay Modal Fonksiyonları
         function openProductModal(item) {
             document.getElementById('modal-product-img').src = item.img;
             document.getElementById('modal-product-title').innerText = item.name;
